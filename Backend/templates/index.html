@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insurance Policy Query System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ Insurance Policy Query System</h1>
+
+    <form id="queryForm">
+      <label for="pdf">📄 Upload Insurance Policy PDF:</label>
+      <input type="file" id="pdf" accept=".pdf" required />
+
+      <label for="query">🔍 Enter your question:</label>
+      <textarea id="query" placeholder="e.g., What is covered under accidental damage?" required></textarea>
+
+      <button type="submit">Ask</button>
+    </form>
+
+    <div id="output" class="hidden">
+      <h2>🧠 Parsed Metadata</h2>
+      <pre id="metadata"></pre>
+
+      <h2>📌 Top Matching Clauses</h2>
+      <div id="clauses"></div>
+
+      <h2>✅ Final Answer</h2>
+      <p id="answer"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
